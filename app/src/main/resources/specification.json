@@ -1,0 +1,68 @@
+{
+    "interface_info": {
+        "title": "example_title",
+        "version": "1.0"
+    },
+    "paths": {
+        "pets": {
+            "dogs": {
+                "GET": {
+                    "params": {
+                        "id": "example_id"
+                    },
+                    "description": "Get dog with example_id",
+                    "responses": {
+                        "200": {
+                            "content-type": "application/json",
+                            "body": {
+                                "title": "dog_title",
+                                "age": "dog_age"
+                            }
+                        }
+                    }
+                },
+                "POST": {
+                    "description": "Post a dog",
+                    "body": {
+                        "title": "dog_title",
+                        "age": "dog_age"
+                    },
+                    "responses": {
+                        "200": {
+                            "content-type": "application/json",
+                            "body": {
+                                "message": "Posted dog",
+                                "data": {
+                                    "title": "dog_title",
+                                    "age": "dog_age"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "pet": {
+            "GET": {
+                "params": {
+                    "id": 1
+                },
+                "description": "Get pet by ID",
+                "responses": {
+                    "200": {
+                        "content-type": "application/json",
+                        "body": {
+                            "id":1,
+                            "category":{
+                                "id":1,
+                                "name":"Dog"
+                            },
+                            "name":"Max",
+                            "status":"available"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
